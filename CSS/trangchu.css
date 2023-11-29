@@ -1,0 +1,116 @@
+input:checked+.carousel {
+    display: block !important;
+}
+
+input:checked~.carousel_fallback {
+    display: none;
+}
+
+.carousel {
+    text-align: center;
+}
+
+.carousel .carousel_wrapper {
+    max-width: 100%;
+}
+
+.carousel_wrapper {
+    display: inline-block;
+    vertical-align: carousel_slidesdle;
+    width: 100%;
+    position: relative;
+}
+
+.carousel_radio--input {
+    display: inline-block;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    margin: 0 0 0 -9999px;
+    float: left;
+    position: absolute;
+    -webkit-appearance: none;
+}
+
+.bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: .3em 1em;
+    display: inline-block;
+    border: 1px solid #804f00;
+    ;
+}
+
+input:checked~.bullet {
+    background: #804f00;
+}
+
+.carousel__slide {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+}
+
+.carousel input:checked+.carousel_thumb--one~* .carousel_slides {
+    background-image: url('../image/anhhoian1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+.carousel input:checked+.carousel_thumb--two~* .carousel_slides {
+    background-image: url('../image/anhhoian2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel input:checked+.carousel_thumb--three~* .carousel_slides {
+    background-image: url('../image/anhhoian3.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel input:checked+.carousel_thumb--four~* .carousel_slides {
+    background-image: url('../image/anhhoian4.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel input:checked+.carousel_thumb--one~* .carousel_slides .carousel_slide_one,
+.carousel input:checked+.carousel_thumb--two~* .carousel_slides .carousel_slide_two,
+.carousel input:checked+.carousel_thumb--three~* .carousel_slides .carousel_slide_three,
+.carousel input:checked+.carousel_thumb--four~* .carousel_slides .carousel_slide_four {
+    display: block;
+    opacity: 1;
+    max-height: none !important;
+    transition: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+.carousel {
+    direction: rtl;
+}
+
+.carousel label {
+    direction: ltr;
+}
+
+@supports (animation:fadeIn) {
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
